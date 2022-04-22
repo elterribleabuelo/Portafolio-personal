@@ -1,0 +1,7 @@
+{
+  "/api-node/*":{
+    "target": "http://localhost:3700",
+    "secure": false,
+    "logLevel":"debug"
+  }
+}
