@@ -25,5 +25,15 @@ export class ProjectService{
     return this._http.post('/api-node/save-project',params,{headers:headers})
   }
 
+  getProjects():Observable<any>{
+    let headers = new HttpHeaders().set('Content-Type','applications/json');
+    return this._http.get('/api-node/projects',{headers:headers});
+  }
+
+  getProject(id):Observable<any>{
+    let headers = new HttpHeaders().set('Content-Type','applications/json');
+    return this._http.get('/api-node/project/' + id ,{headers:headers});
+  }
+
 
 }
