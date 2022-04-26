@@ -35,5 +35,18 @@ export class ProjectService{
     return this._http.get('/api-node/project/' + id ,{headers:headers});
   }
 
+  deleteProject(id):Observable<any>{
+    let headers = new HttpHeaders().set('Content-Type','applications/json');
+    return this._http.delete('/api-node/project/' + id ,{headers:headers});
+  }
+
+  updateProject(project):Observable<any>{
+    //let params = JSON.stringify(project);
+    let headers = new HttpHeaders().set('Content-Type','applications/json');
+
+    return this._http.put('/api-node/project/' + project._id, project);
+
+  }
+
 
 }

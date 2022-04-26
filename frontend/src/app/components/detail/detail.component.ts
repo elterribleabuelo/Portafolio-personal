@@ -13,6 +13,7 @@ export class DetailComponent implements OnInit {
 
   public project:Project;
   public url:string;
+  public confirm:boolean;
 
   constructor(
     private _projectService:ProjectService,
@@ -20,6 +21,7 @@ export class DetailComponent implements OnInit {
     private _route:ActivatedRoute
   ) {
     this.url = Global.url_node;
+    this.confirm = false;
    }
 
   ngOnInit() {
@@ -38,6 +40,22 @@ export class DetailComponent implements OnInit {
 
       },error => {
         console.log(error);
+      }
+    )
+  }
+
+  setConfirm(confirm){
+    this.confirm = confirm;
+  }
+
+  deleteProject(id){
+    this._projectService.deleteProject(id).subscribe(
+      response => {
+        if (response.project){
+          this._router.navigate(['/proyectos']);
+        }
+      },error => {
+        console.log(<any>error)
       }
     )
   }
