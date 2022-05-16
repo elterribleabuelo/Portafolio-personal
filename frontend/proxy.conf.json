@@ -1,0 +1,14 @@
+{
+  "/api-node/*":{
+    "target": "http://localhost:3700",
+    "secure": false,
+    "changeOrigin": true,
+    "logLevel":"debug"
+  },
+  "/api-django/*":{
+    "target": "http://localhost:8000",
+    "secure": false,
+    "changeOrigin": true,
+    "logLevel":"debug"
+  }
+}

@@ -16,6 +16,9 @@ import { EditComponent } from './components/edit/edit.component';
 import * as $ from "jquery";
 import { SliderComponent } from './components/slider/slider.component';
 import { ResaltadoDirective } from './resaltado.directive';
+import { LoginComponent } from './components/login/login.component';
+import { LoginRegisterLayoutComponent } from './components/login-register-layout/login-register-layout.component';
+import { RegisterUserComponent } from './components/register-user/register-user.component';
 
 @NgModule({
   declarations: [
@@ -28,7 +31,10 @@ import { ResaltadoDirective } from './resaltado.directive';
     DetailComponent,
     EditComponent,
     SliderComponent,
-    ResaltadoDirective
+    ResaltadoDirective,
+    LoginComponent,
+    LoginRegisterLayoutComponent,
+    RegisterUserComponent
   ],
   imports: [
     BrowserModule,

@@ -8,11 +8,16 @@ import { ContactComponent } from './components/contact/contact.component';
 import { ErrorComponent } from './components/error/error.component';
 import  {DetailComponent } from './components/detail/detail.component';
 import { EditComponent } from './components/edit/edit.component';
-
+import { LoginComponent } from './components/login/login.component';
+import { LoginRegisterLayoutComponent } from './components/login-register-layout/login-register-layout.component';
+import { RegisterUserComponent } from './components/register-user/register-user.component';
 
 
 const appRoutes:Routes = [
   {path:'',component:AboutComponent},
+  {path:'inicio',component:LoginRegisterLayoutComponent},
+  {path:'login',component:LoginComponent},
+  {path:'register-user',component:RegisterUserComponent},
   {path:'sobre-mi',component:AboutComponent},
   {path:'proyectos',component:ProjectsComponent},
   {path:'crear-proyecto',component:CreateComponent},
