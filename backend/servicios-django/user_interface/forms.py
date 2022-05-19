@@ -1,5 +1,3 @@
-from email import message
-from black import Mode
 from django import forms
 from django.db.models import fields
 from django.forms import ModelForm
@@ -31,6 +29,12 @@ class ExperienceForm(forms.ModelForm):
              'the_year':"Year",
              'institute':"Company name"
         }
+
+class ProjectForm(ModelForm):
+    class Meta:
+        model = ProjectModel
+        fields = '__all__'
+
 class SkillsetForm(ModelForm):
     class Meta:
         model = SkillsetModel

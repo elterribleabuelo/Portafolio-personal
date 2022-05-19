@@ -19,6 +19,10 @@ import { ResaltadoDirective } from './resaltado.directive';
 import { LoginComponent } from './components/login/login.component';
 import { LoginRegisterLayoutComponent } from './components/login-register-layout/login-register-layout.component';
 import { RegisterUserComponent } from './components/register-user/register-user.component';
+import { CreateFormComponent } from './components/create-form/create-form.component';
+
+
+import { ScriptService } from './services/script.service';
 
 @NgModule({
   declarations: [
@@ -34,7 +38,8 @@ import { RegisterUserComponent } from './components/register-user/register-user.
     ResaltadoDirective,
     LoginComponent,
     LoginRegisterLayoutComponent,
-    RegisterUserComponent
+    RegisterUserComponent,
+    CreateFormComponent
   ],
   imports: [
     BrowserModule,
@@ -45,7 +50,8 @@ import { RegisterUserComponent } from './components/register-user/register-user.
     CommonModule,
   ],
   providers: [
-    appRoutingProviders
+    appRoutingProviders,
+    ScriptService
   ],
   bootstrap: [AppComponent]
 })

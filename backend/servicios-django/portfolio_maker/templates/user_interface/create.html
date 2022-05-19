@@ -1,0 +1,25 @@
+<form  method = "POST" enctype = "multipart/formdata">
+    <!-- Security token-->
+    {% csrf_token %}
+    <!-- Using the Formset -->
+
+    {{ introForm.as_p }}
+    {{ eduFORM.as_p }}
+    {{ expFORM.as_p }}
+    {{ projFORM.as_p }}
+
+    <h2>Skill Form 1</h2>
+    {{ skillFORM.as_p}}
+    
+    <h2>Skill Form 2</h2>
+    {{ skillFORM.as_p}}
+    
+    <h2>Skill Form 3</h2>
+    {{ skillFORM.as_p}}
+
+    <input type="submit" value = "submit">
+</form>
+
+
+<!--https://stackoverflow.com/questions/54160533/how-to-retrieve-and-submit-a-form-in-angular-6-that-has-been-generated-by-a-djan-->
+<!--https://www.geeksforgeeks.org/form-as_p-render-django-forms-as-paragraph/-->
